@@ -1,15 +1,8 @@
 #!/usr/bin/python3
+def square_matrix_simple(matrix=[]):
+    new_matrix = matrix.copy()
 
+    for i in range(len(matrix)):
+        new_matrix[i] = list(map(lambda x: x**2, matrix[i]))
 
-def search_replace(my_list, search, replace):
-    """
-    A function that replaces all occurrences
-    of an element by another in a new list
-    """
-    new_list = []
-    for element in my_list:
-        if element == search:
-            new_list.append(replace)
-        else:
-            new_list.append(element)
-    return new_list
+    return (new_matrix)
